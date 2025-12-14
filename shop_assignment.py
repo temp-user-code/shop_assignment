@@ -16,6 +16,12 @@ shop = [
 ]
 
 assignment_description_markdown = """
+# Note: Desktop Only
+
+⚠️ **This app is designed to run on desktop screens only and is not responsive for mobile devices. For the best experience, please use a desktop or laptop.**
+
+---
+
 # Online Shop System
 
 ## Project Overview
@@ -170,9 +176,10 @@ def main_menu():
         elif st.session_state.checkout:
             checkout(st.session_state.cart)
             if st.button("Exit from Shop", type="primary"):
-                st.session_state.entered = False
+                st.session_state.clear()
                 st.rerun()
         
         
+
 
 main_menu()
